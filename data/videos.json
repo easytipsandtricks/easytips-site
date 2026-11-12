@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "updated": "2026-11-11",
+  "channel": "https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ",
+  "videos": [
+    {
+      "id": "drawing-tips-02",
+      "youtube_id": "8hdQF36PJfg",
+      "url": "https://www.youtube.com/watch?v=8hdQF36PJfg",
+      "title": "How to Draw a Snowman Superhero | Easy Drawing for Kids",
+      "series": "drawing-tips",
+      "series_name": "Drawing Tips",
+      "audience": "kids",
+      "type": "full",
+      "duration_s": 88.2,
+      "duration": "1:28",
+      "published": "2026-11-11",
+      "thumbnail": "assets/videos/drawing-tips-02.jpg"
+    },
+    {
+      "id": "drawing-tips-01",
+      "youtube_id": "sox4HZLiYUc",
+      "url": "https://www.youtube.com/watch?v=sox4HZLiYUc",
+      "title": "How to Draw a Superhero Stick Figure | Easy Drawing for Kids",
+      "series": "drawing-tips",
+      "series_name": "Drawing Tips",
+      "audience": "kids",
+      "type": "full",
+      "duration_s": 86.4,
+      "duration": "1:26",
+      "published": "2026-11-11",
+      "thumbnail": "assets/videos/drawing-tips-01.jpg"
+    },
+    {
+      "id": "driving-tips-08",
+      "youtube_id": "AHqDYHuj5V4",
+      "url": "https://www.youtube.com/watch?v=AHqDYHuj5V4",
+      "title": "Auto Hold: Stop Holding the Brake in Traffic",
+      "series": "driving-tips",
+      "series_name": "Driving Tips",
+      "audience": "grown-ups",
+      "type": "full",
+      "duration_s": 40.2,
+      "duration": "0:40",
+      "published": "2026-11-11",
+      "thumbnail": "assets/videos/driving-tips-08.jpg"
+    },
+    {
+      "id": "driving-tips-05",
+      "youtube_id": "ALJUYH6Haq4",
+      "url": "https://www.youtube.com/watch?v=ALJUYH6Haq4",
+      "title": "How to Set Your Side Mirrors to Shrink Blind Spots",
+      "series": "driving-tips",
+      "series_name": "Driving Tips",
+      "audience": "grown-ups",
+      "type": "full",
+      "duration_s": 45,
+      "duration": "0:45",
+      "published": "2026-11-10",
+      "thumbnail": "assets/videos/driving-tips-05.jpg"
+    },
+    {
+      "id": "driving-tips-07",
+      "youtube_id": "NWl2S-1trJo",
+      "url": "https://www.youtube.com/watch?v=NWl2S-1trJo",
+      "title": "Dead Key Fob? Start Your Push-Button Car Anyway",
+      "series": "driving-tips",
+      "series_name": "Driving Tips",
+      "audience": "grown-ups",
+      "type": "full",
+      "duration_s": 37.2,
+      "duration": "0:37",
+      "published": "2026-11-07",
+      "thumbnail": "assets/videos/driving-tips-07.jpg"
+    },
+    {
+      "id": "driving-tips-01",
+      "youtube_id": "yFerwv0MZiY",
+      "url": "https://www.youtube.com/watch?v=yFerwv0MZiY",
+      "title": "Stop Driving Miserably: How to Find the Perfect Car Seating Position",
+      "series": "driving-tips",
+      "series_name": "Driving Tips",
+      "audience": "grown-ups",
+      "type": "full",
+      "duration_s": 60,
+      "duration": "1:00",
+      "published": "2026-11-07",
+      "thumbnail": "assets/videos/driving-tips-01.jpg"
+    }
+  ]
+}

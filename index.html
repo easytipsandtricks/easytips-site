@@ -1,65 +1,237 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EasyTipsAndTricks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EasyTipsAndTricks: easy everyday tips for the whole family</title>
 <meta name="description" content="Easy, useful everyday tips and tricks for the whole family: driving and car know-how, home and holiday tips, and drawing tutorials and crafts for kids.">
+<link rel="canonical" href="https://easytips.capsai.net/">
+<meta name="theme-color" content="#121418">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EasyTipsAndTricks">
+<meta property="og:title" content="EasyTipsAndTricks: everyday things, done a little smarter">
+<meta property="og:description" content="Driving and car know-how in 3D, home and holiday tips, and draw-along tutorials and crafts for kids.">
+<meta property="og:url" content="https://easytips.capsai.net/">
+<meta property="og:image" content="https://easytips.capsai.net/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The EasyTipsAndTricks lightbulb, gear and check mark in 3D">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
-<style>
-  :root { --bg:#282828; --panel:#323232; --line:#3d3d3d; --text:#f3f4f6; --muted:#b4b8bf; --brand:#2f8cff; --amber:#FFB020; }
-  * { box-sizing:border-box }
-  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
-  main { max-width:880px; margin:0 auto; padding:40px 16px 64px }
-  header { text-align:center; padding:8px 0 24px }
-  header img { width:min(520px, 100%); height:auto }
-  .lead { font-size:19px; color:var(--muted); max-width:640px; margin:8px auto 0 }
-  h2 { font-size:22px; margin:40px 0 12px }
-  a { color:var(--brand); text-decoration:none; overflow-wrap:anywhere } a:hover { text-decoration:underline }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px }
-  .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px 20px }
-  .card h3 { margin:0 0 4px; font-size:18px }
-  .card p { margin:0 0 10px; color:var(--muted); font-size:15px }
-  .tag { display:inline-block; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--amber); margin-bottom:6px }
-  .btn { display:inline-block; background:var(--brand); color:#fff; font-weight:700; padding:10px 18px; border-radius:999px; margin-top:16px }
-  .btn:hover { text-decoration:none; filter:brightness(1.1) }
-  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; align-items:center }
-</style>
+<link rel="stylesheet" href="site.css">
+<script>(function(d){var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;d.className=(r||!window.WebGL2RenderingContext)?'js static':'js gl'})(document.documentElement)</script>
+<script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
+<script type="module" src="site.js"></script>
 </head>
 <body>
-<main>
-  <header>
-    <img src="assets/logo-stacked.jpg" alt="EasyTipsAndTricks" width="880" height="400">
-    <p class="lead">Easy, useful everyday tips and tricks for the whole family: things everyone does, done a little smarter.</p>
-    <a class="btn" href="https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ?sub_confirmation=1">Watch and subscribe on YouTube</a>
-  </header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><clipPath id="mk-cut"><path d="M-106.8 446.8L281.7 -10.4L510.3 183.9L121.7 641.1Z"/></clipPath><symbol id="mk" viewBox="0 0 240 240"><path d="M120.1 88.5L122.8 87.8L125.6 87.2L126.6 77.5L134 77L141.4 77.5L142.4 87.2L145.2 87.8L147.9 88.5L147.9 88.5L150.6 89.4L153.3 90.4L159.4 82.8L165.9 86.4L171.9 90.8L167.5 99.5L169.5 101.5L171.4 103.6L171.4 103.6L173.2 105.8L174.9 108.1L184.2 105L187.7 111.5L190.3 118.4L181.9 123.4L182.5 126.2L183 129L183 129L183.3 131.8L183.5 134.6L193 137L192.4 144.4L190.9 151.6L181.1 151.3L180.1 154L179 156.6L179 156.6L177.8 159.1L176.4 161.6L183.1 168.7L178.6 174.6L173.4 179.9L165.3 174.3L163.1 176L160.8 177.6L160.8 177.6L158.3 179.1L155.8 180.4L157.6 190.1L150.6 192.6L143.4 194.2L139.6 185.2L136.8 185.4L134 185.5L134 185.5L131.2 185.4L128.4 185.2L124.6 194.2L117.4 192.6L110.4 190.1L112.2 180.4L109.7 179.1L107.2 177.6L107.2 177.6L104.9 176L102.7 174.3L94.6 179.9L89.4 174.6L84.9 168.7L91.6 161.6L90.2 159.1L89 156.6L89 156.6L87.9 154L86.9 151.3L77.1 151.6L75.6 144.4L75 137L84.5 134.6L84.7 131.8L85 129L85 129L85.5 126.2L86.1 123.4L77.7 118.4L80.3 111.5L83.8 105L93.1 108.1L94.8 105.8L96.6 103.6L96.6 103.6L98.5 101.5L100.5 99.5L96.1 90.8L102.1 86.4L108.6 82.8L114.7 90.4L117.4 89.4L120.1 88.5Z" fill="#f4f6f9" clip-path="url(#mk-cut)"/><path d="M34.2 128.5L29.7 122.1L25.9 115.3L23 108.1L20.9 100.6L19.8 93L19.5 85.3L20.2 77.6L21.7 70L24.2 62.7L27.5 55.6L31.6 48.9L36.5 42.8L42 37.1L48.3 32.1L55 27.8L62.2 24.2L69.8 21.4L77.7 19.4L85.8 18.3L93.9 18L102.1 18.6L110.1 20L117.9 22.3L125.4 25.4L132.4 29.2L139 33.8L145 39L150.3 44.9L154.9 51.2L158.8 58L161.8 65.2L163.9 72.7L148.7 75.8L147.1 69.9L144.7 64.3L141.7 59L138 54L133.8 49.5L129.1 45.4L123.9 41.8L118.4 38.8L112.5 36.4L106.3 34.6L100 33.5L93.6 33L87.2 33.2L80.9 34.1L74.6 35.7L68.7 37.9L63 40.7L57.6 44.1L52.8 48L48.4 52.4L44.5 57.2L41.3 62.4L38.7 68L36.8 73.7L35.5 79.6L35 85.6L35.2 91.7L36.1 97.7L37.7 103.5L40 109.1L43 114.5L46.6 119.5Z" fill="#1f86f5"/><circle cx="94" cy="26.5" r="4.2" fill="#fff"/><path d="M81.7 60.1L84 59.2L86.4 58.5L87.8 50.6L94.5 50L101.2 50.6L102.6 58.5L105 59.2L107.3 60.1L107.3 60.1L109.6 61.1L111.8 62.3L118.3 57.6L123.5 62L127.9 67.2L123.2 73.7L124.4 75.9L125.4 78.2L125.4 78.2L126.3 80.5L127 82.9L134.9 84.3L135.5 91L134.9 97.7L127 99.1L126.3 101.5L125.4 103.8L125.4 103.8L124.4 106.1L123.2 108.3L127.9 114.8L123.5 120L118.3 124.4L111.8 119.7L109.6 120.9L107.3 121.9L107.3 121.9L105 122.8L102.6 123.5L101.2 131.4L94.5 132L87.8 131.4L86.4 123.5L84 122.8L81.7 121.9L81.7 121.9L79.4 120.9L77.2 119.7L70.7 124.4L65.5 120L61.1 114.8L65.8 108.3L64.6 106.1L63.6 103.8L63.6 103.8L62.7 101.5L62 99.1L54.1 97.7L53.5 91L54.1 84.3L62 82.9L62.7 80.5L63.6 78.2L63.6 78.2L64.6 75.9L65.8 73.7L61.1 67.2L65.5 62L70.7 57.6L77.2 62.3L79.4 61.1L81.7 60.1ZM113.3 86L111.4 81.2L108.3 77.2L104.3 74.1L99.5 72.2L94.5 71.5L89.5 72.2L84.7 74.1L80.7 77.2L77.6 81.3L75.7 86L75 91L75.7 96L77.6 100.8L80.7 104.8L84.8 107.9L89.5 109.8L94.5 110.5L99.5 109.8L104.3 107.9L108.3 104.8L111.4 100.8L113.3 96L114 91Z" fill="#f4f6f9" fill-rule="evenodd"/><path d="M127 209L129.5 209.7L131.3 211.5L132 214L132 214L131.3 216.5L129.5 218.3L127 219L61 219L58.5 218.3L56.7 216.5L56 214L56 214L56.7 211.5L58.5 209.7L61 209Z" fill="#1f86f5"/><path d="M111.5 225L113.8 225.6L115.4 227.3L116 229.5L116 229.5L115.4 231.8L113.8 233.4L111.5 234L76.5 234L74.3 233.4L72.6 231.8L72 229.5L72 229.5L72.6 227.3L74.3 225.6L76.5 225Z" fill="#1f86f5"/><path d="M14 145L43 132L82.5 170L197 46L216 42L210 64L82.5 214Z" fill="#1f86f5"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to content</a>
 
-  <h2>For grown-ups</h2>
-  <div class="grid">
-    <div class="card"><span class="tag">Driving Tips</span><h3>Real-world car tips</h3><p>Seating position, mirrors, key fob tricks, Auto Hold and winter driving, for any car.</p><a href="https://www.youtube.com/playlist?list=PLd47T4MCrI28">Playlist →</a></div>
-    <div class="card"><span class="tag">How Cars Work</span><h3>Inside your car, in 3D</h3><p>Engines, hybrids and brakes explained with x-ray 3D animation.</p><a href="https://www.youtube.com/playlist?list=PLGwY0PJOTd_U">Playlist →</a></div>
-    <div class="card"><span class="tag">Home &amp; Life Tips</span><h3>Everyday know-how</h3><p>Cooking basics, holidays, winter prep and home tricks, checked against trusted sources.</p><a href="https://www.youtube.com/playlist?list=PLb6cqVXaxp_k">Playlist →</a></div>
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="EasyTipsAndTricks, back to top">
+    <svg class="mark" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><use href="#mk"/></svg>
+    <span class="word"><b>Easy</b>TipsAndTricks</span>
+  </a>
+  <nav aria-label="Sections">
+    <ul>
+      <li><a href="#grown-ups">Grown-ups</a></li>
+      <li><a href="#kids">Kids</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#fan-wall">Fan wall</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn-sm" href="https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ?sub_confirmation=1" target="_blank" rel="noopener">Subscribe<span class="sr"> on YouTube (opens in a new tab)</span></a>
+</header>
+
+<div class="stage" aria-hidden="true"><canvas id="stage"></canvas></div>
+
+<main id="main">
+  <div class="story">
+    <section class="chapter hero" id="top" data-act="0" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="copy">
+          <p class="eyebrow">Tips and tricks for the whole family</p>
+          <h1 id="hero-title">Everyday things, <span class="hl">done a little smarter.</span></h1>
+          <p class="lead">Easy, useful everyday tips and tricks for the whole family: driving and car know-how, home and holiday tips, and drawing tutorials and crafts for kids.</p>
+          <div class="cta">
+            <a class="btn" href="https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ?sub_confirmation=1" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Watch and subscribe on YouTube<span class="sr"> (opens in a new tab)</span></a>
+            <a class="btn btn-ghost" href="#videos">Latest videos</a>
+          </div>
+        </div>
+      </div>
+      <p class="scroll-hint" aria-hidden="true"><span></span>Scroll the story</p>
+    </section>
+
+    <section class="chapter" id="grown-ups" data-act="1" aria-labelledby="gu-title">
+      <div class="wrap">
+        <div class="copy panel reveal">
+          <p class="eyebrow">For grown-ups</p>
+          <h2 id="gu-title">See inside your car. Then get the little things right.</h2>
+          <div class="series">
+            <article class="scard">
+              <p class="tag">Driving Tips</p><h3>Real-world car tips</h3>
+              <p>Seating position, mirrors, key fob tricks, Auto Hold and winter driving, for any car.</p>
+              <a href="https://www.youtube.com/playlist?list=PLd47T4MCrI28" target="_blank" rel="noopener">Playlist<span class="sr">: Driving Tips (opens in a new tab)</span> <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="scard">
+              <p class="tag">How Cars Work</p><h3>Inside your car, in 3D</h3>
+              <p>Engines, hybrids and brakes explained with x-ray 3D animation.</p>
+              <a href="https://www.youtube.com/playlist?list=PLGwY0PJOTd_U" target="_blank" rel="noopener">Playlist<span class="sr">: How Cars Work (opens in a new tab)</span> <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="scard">
+              <p class="tag">Home &amp; Life Tips</p><h3>Everyday know-how</h3>
+              <p>Cooking basics, holidays, winter prep and home tricks, checked against trusted sources.</p>
+              <a href="https://www.youtube.com/playlist?list=PLb6cqVXaxp_k" target="_blank" rel="noopener">Playlist<span class="sr">: Home &amp; Life Tips (opens in a new tab)</span> <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+        <figure class="still"><img src="assets/story/grown-ups.jpg" alt="Our 3D car in x-ray view, with the engine glowing amber inside" width="960" height="600" loading="lazy" decoding="async"></figure>
+      </div>
+    </section>
+
+    <section class="chapter" id="kids" data-act="2" aria-labelledby="kids-title">
+      <div class="wrap">
+        <div class="copy panel reveal">
+          <p class="eyebrow eyebrow-kids">For kids</p>
+          <h2 id="kids-title">Grab a pencil. Let's draw a hero.</h2>
+          <div class="series">
+            <article class="scard">
+              <p class="tag tag-kids">Drawing Tips</p><h3>Draw along, step by step</h3>
+              <p>Our own Power-Up heroes, with paper, a pencil and markers. Pause after every step!</p>
+              <a href="https://www.youtube.com/playlist?list=PLPeZbZIjFdss" target="_blank" rel="noopener">Playlist<span class="sr">: Drawing Tips (opens in a new tab)</span> <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+        <figure class="still"><img src="assets/story/kids.jpg" alt="A sheet of paper with our Snow Hero drawn on it: a snowman with an ice crown, scarf and mittens" width="960" height="600" loading="lazy" decoding="async"></figure>
+      </div>
+    </section>
+
+    <section class="chapter" id="crafts" data-act="3" aria-labelledby="crafts-title">
+      <div class="wrap">
+        <div class="copy panel reveal">
+          <p class="eyebrow eyebrow-kids">For kids</p>
+          <h2 id="crafts-title">Fold it, snip it, unfold the magic.</h2>
+          <div class="series">
+            <article class="scard">
+              <p class="tag tag-kids">Kids Crafts &amp; Activities</p><h3>Easy things to make</h3>
+              <p>Paper snowflakes, greeting cards and holiday makes. Ask a grown-up to help with scissors and glue.</p>
+              <a href="https://www.youtube.com/playlist?list=PLfJKP_XtJNCs" target="_blank" rel="noopener">Playlist<span class="sr">: Kids Crafts &amp; Activities (opens in a new tab)</span> <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+        <figure class="still"><img src="assets/story/crafts.jpg" alt="Paper snowflakes in white, blue, teal and amber" width="960" height="600" loading="lazy" decoding="async"></figure>
+      </div>
+    </section>
+
+    <section class="chapter" id="subscribe" data-act="4" aria-labelledby="sub-title">
+      <div class="wrap">
+        <div class="copy panel reveal">
+          <p class="eyebrow">EasyTipsAndTricks</p>
+          <h2 id="sub-title">New easy tips every week.</h2>
+          <p>Short, checked and made with care: one clear idea per video, for grown-ups and for kids.</p>
+          <div class="cta">
+            <a class="btn" href="https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube<span class="sr"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+        <figure class="still"><img src="assets/story/mark.jpg" alt="The EasyTipsAndTricks logo in 3D: a lightbulb with a gear and a check mark" width="960" height="600" loading="lazy" decoding="async"></figure>
+      </div>
+    </section>
   </div>
 
-  <h2>For kids</h2>
-  <div class="grid">
-    <div class="card"><span class="tag">Drawing Tips</span><h3>Draw along, step by step</h3><p>Our own Power-Up heroes, with paper, a pencil and markers. Pause after every step!</p><a href="https://www.youtube.com/playlist?list=PLPeZbZIjFdss">Playlist →</a></div>
-    <div class="card"><span class="tag">Kids Crafts &amp; Activities</span><h3>Easy things to make</h3><p>Paper snowflakes, greeting cards and holiday makes. Ask a grown-up to help with scissors and glue.</p><a href="https://www.youtube.com/playlist?list=PLfJKP_XtJNCs">Playlist →</a></div>
-  </div>
+  <section class="section videos" id="videos" aria-labelledby="videos-title">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">Fresh from the channel</p>
+          <h2 id="videos-title">Latest videos</h2>
+        </div>
+        <a class="more" href="https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ/videos" target="_blank" rel="noopener">All videos on YouTube<span class="sr"> (opens in a new tab)</span> <span aria-hidden="true">→</span></a>
+      </div>
+<!-- site-build:videos -->
+      <ul class="vgrid">
+        <li class="vcard"><a class="vlink" href="https://www.youtube.com/watch?v=8hdQF36PJfg" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/videos/drawing-tips-02.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="dur"><span class="sr">Length </span>1:28</span></span>
+          <span class="vmeta"><span class="tag tag-kids">Drawing Tips</span><span class="vtitle">How to Draw a Snowman Superhero | Easy Drawing for Kids</span><span class="vdate"><time datetime="2026-11-11">Nov 11, 2026</time></span><span class="sr"> (opens YouTube in a new tab)</span></span>
+        </a></li>
+        <li class="vcard"><a class="vlink" href="https://www.youtube.com/watch?v=sox4HZLiYUc" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/videos/drawing-tips-01.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="dur"><span class="sr">Length </span>1:26</span></span>
+          <span class="vmeta"><span class="tag tag-kids">Drawing Tips</span><span class="vtitle">How to Draw a Superhero Stick Figure | Easy Drawing for Kids</span><span class="vdate"><time datetime="2026-11-11">Nov 11, 2026</time></span><span class="sr"> (opens YouTube in a new tab)</span></span>
+        </a></li>
+        <li class="vcard"><a class="vlink" href="https://www.youtube.com/watch?v=AHqDYHuj5V4" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/videos/driving-tips-08.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="dur"><span class="sr">Length </span>0:40</span></span>
+          <span class="vmeta"><span class="tag">Driving Tips</span><span class="vtitle">Auto Hold: Stop Holding the Brake in Traffic</span><span class="vdate"><time datetime="2026-11-11">Nov 11, 2026</time></span><span class="sr"> (opens YouTube in a new tab)</span></span>
+        </a></li>
+        <li class="vcard"><a class="vlink" href="https://www.youtube.com/watch?v=ALJUYH6Haq4" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/videos/driving-tips-05.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="dur"><span class="sr">Length </span>0:45</span></span>
+          <span class="vmeta"><span class="tag">Driving Tips</span><span class="vtitle">How to Set Your Side Mirrors to Shrink Blind Spots</span><span class="vdate"><time datetime="2026-11-10">Nov 10, 2026</time></span><span class="sr"> (opens YouTube in a new tab)</span></span>
+        </a></li>
+        <li class="vcard"><a class="vlink" href="https://www.youtube.com/watch?v=NWl2S-1trJo" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/videos/driving-tips-07.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="dur"><span class="sr">Length </span>0:37</span></span>
+          <span class="vmeta"><span class="tag">Driving Tips</span><span class="vtitle">Dead Key Fob? Start Your Push-Button Car Anyway</span><span class="vdate"><time datetime="2026-11-07">Nov 7, 2026</time></span><span class="sr"> (opens YouTube in a new tab)</span></span>
+        </a></li>
+        <li class="vcard"><a class="vlink" href="https://www.youtube.com/watch?v=yFerwv0MZiY" target="_blank" rel="noopener">
+          <span class="thumb"><img src="assets/videos/driving-tips-01.jpg" alt="" width="640" height="360" loading="lazy" decoding="async"><span class="dur"><span class="sr">Length </span>1:00</span></span>
+          <span class="vmeta"><span class="tag">Driving Tips</span><span class="vtitle">Stop Driving Miserably: How to Find the Perfect Car Seating Position</span><span class="vdate"><time datetime="2026-11-07">Nov 7, 2026</time></span><span class="sr"> (opens YouTube in a new tab)</span></span>
+        </a></li>
+      </ul>
+<!-- /site-build:videos -->
+      <p class="stamp">Videos open on YouTube. List updated <!-- site-build:updated --><time datetime="2026-11-11">Nov 11, 2026</time><!-- /site-build:updated -->.</p>
+    </div>
+  </section>
 
-  <h2>Fan drawings wall</h2>
-  <div class="card">
-    <p style="color:var(--text)">Drew one of our heroes? <strong>Grown-ups:</strong> email a photo of the drawing to <a href="mailto:sendeasytipsandtricks@gmail.com">sendeasytipsandtricks@gmail.com</a> with a nickname for the artist. Please send only the paper (no names, faces or hands). By sending it, you agree we may show it in a video.</p>
-  </div>
+  <section class="section fan" id="fan-wall" aria-labelledby="fan-title">
+    <div class="wrap">
+      <div class="fan-card reveal">
+        <svg class="fan-art" viewBox="0 0 200 160" aria-hidden="true" focusable="false">
+          <rect x="34" y="18" width="132" height="128" rx="6" fill="#fffdf8" transform="rotate(-4 100 82)"/>
+          <circle cx="100" cy="16" r="9" fill="#FFB020" stroke="#1F2328" stroke-width="3"/>
+          <g fill="none" stroke="#1F2328" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-4 100 82)">
+            <circle cx="100" cy="112" r="24"/><circle cx="100" cy="74" r="17"/>
+            <path d="M84 60l-6-14 12 7 10-14 10 14 12-7-6 14"/><path d="M82 92l-18-12M118 92l18-12"/>
+          </g>
+          <g transform="rotate(-4 100 82)"><path d="M101 75l13 3-13 3z" fill="#F97316"/><circle cx="94" cy="70" r="2.6" fill="#1F2328"/><circle cx="106" cy="70" r="2.6" fill="#1F2328"/></g>
+        </svg>
+        <div>
+          <p class="eyebrow eyebrow-kids">For young artists</p>
+          <h2 id="fan-title">Fan drawings wall</h2>
+          <p>Drew one of our heroes? <strong>Grown-ups:</strong> email a photo of the drawing to <a href="mailto:sendeasytipsandtricks@gmail.com">sendeasytipsandtricks@gmail.com</a> with a nickname for the artist. Please send only the paper (no names, faces or hands). By sending it, you agree we may show it in a video.</p>
+          <a class="btn" href="mailto:sendeasytipsandtricks@gmail.com?subject=Fan%20drawing">Email a drawing</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>About EasyTips Studio</h2>
-  <p>EasyTips Studio is the private tool the channel owner uses to make these videos and upload them to the channel, using the owner's own Google sign-in. It isn't offered to the public and never accesses anyone else's account. See the <a href="privacy.html">privacy policy</a>.</p>
-
-  <footer>
-    <span><img src="assets/logo-badge.jpg" alt="" width="44" height="44" style="vertical-align:middle;margin-right:10px;border-radius:50%">© 2026 EasyTipsAndTricks</span>
-    <span><a href="mailto:sendeasytipsandtricks@gmail.com">sendeasytipsandtricks@gmail.com</a> · <a href="privacy.html">Privacy policy</a></span>
-  </footer>
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal">
+          <p class="eyebrow">Behind the videos</p>
+          <h2 id="about-title">About EasyTips Studio</h2>
+          <p>EasyTips Studio is the private tool the channel owner uses to make these videos and upload them to the channel, using the owner's own Google sign-in. It isn't offered to the public and never accesses anyone else's account. See the <a href="privacy.html">privacy policy</a>.</p>
+        </div>
+        <ul class="facts reveal">
+          <li><b>No cookies, no tracking.</b> This site has no analytics, ads or third-party scripts.</li>
+          <li><b>Made for families.</b> Kids' videos are marked made for kids; fan art is shown only with a grown-up's OK.</li>
+          <li><b>Checked, not guessed.</b> Tips are checked against trusted sources, with safety notes where they matter.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="EasyTipsAndTricks, back to top"><svg class="mark" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><use href="#mk"/></svg><span class="word"><b>Easy</b>TipsAndTricks</span></a>
+    <ul class="links">
+      <li><a href="https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ" target="_blank" rel="noopener">YouTube channel<span class="sr"> (opens in a new tab)</span></a></li>
+      <li><a href="mailto:sendeasytipsandtricks@gmail.com">sendeasytipsandtricks@gmail.com</a></li>
+      <li><a href="privacy.html">Privacy policy</a></li>
+    </ul>
+    <p class="copy-note">© 2026 EasyTipsAndTricks</p>
+  </div>
+</footer>
 </body>
 </html>
