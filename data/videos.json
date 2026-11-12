@@ -4,6 +4,20 @@
   "channel": "https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ",
   "videos": [
     {
+      "id": "how-cars-work-01",
+      "youtube_id": "G8_30_kJsYM",
+      "url": "https://www.youtube.com/watch?v=G8_30_kJsYM",
+      "title": "How a Car Engine Works: The 4 Strokes in 3D",
+      "series": "how-cars-work",
+      "series_name": "How Cars Work",
+      "audience": "grown-ups",
+      "type": "full",
+      "duration_s": 94.8,
+      "duration": "1:35",
+      "published": "2026-11-11",
+      "thumbnail": "assets/videos/how-cars-work-01.jpg"
+    },
+    {
       "id": "drawing-tips-02",
       "youtube_id": "8hdQF36PJfg",
       "url": "https://www.youtube.com/watch?v=8hdQF36PJfg",
