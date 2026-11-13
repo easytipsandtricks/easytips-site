@@ -193,3 +193,15 @@ html:not(.gl) .scroll-hint { display: none }
 /* EasyTips Kids channel note in the kids series cards (spec 0007) */
 .kids-channel { margin-top: 12px; font-size: .95em; color: var(--muted) }
 .kids-channel a { white-space: nowrap }
+/* EasyTips Kids badge: sits in the empty space above the kids panels; its text ring spins in when the panel appears */
+.copy { position: relative }
+.kids-badge { position: absolute; left: 0; bottom: calc(100% + 20px); width: clamp(96px, calc(50svh - 225px), 200px); aspect-ratio: 1; border-radius: 50%; filter: drop-shadow(0 10px 28px rgba(5, 133, 237, .28)) }
+.kids-badge img { position: absolute; inset: 0; width: 100%; height: 100% }
+.kb-ring { transition: transform .6s cubic-bezier(.2, .8, .2, 1) }
+.kids-badge:hover .kb-ring, .kids-badge:focus-visible .kb-ring { transform: rotate(40deg) }
+.reveal-on .reveal.in .kb-ring { animation: kb-spin 1.6s .35s cubic-bezier(.2, .8, .2, 1) backwards }
+@keyframes kb-spin { 0% { transform: rotate(-320deg) scale(.92); opacity: 0 } 25% { opacity: 1 } 80% { transform: rotate(2.5deg) scale(1) } 100% { transform: none } }
+@media (max-width: 759px), (max-aspect-ratio: 1/1), (max-height: 639px) {
+  .kids-badge { position: relative; bottom: auto; float: right; width: 84px; margin: -6px -4px 8px 12px }
+}
+html:not(.gl) .kids-badge { position: relative; bottom: auto; float: right; width: 96px; margin: -6px -4px 8px 12px }
