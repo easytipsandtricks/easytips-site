@@ -189,3 +189,7 @@ html:not(.gl) .scroll-hint { display: none }
 .doc .muted { color: var(--muted) }
 .doc li { margin: 6px 0 }
 .doc code { font-size: .9em; background: rgba(255, 255, 255, .07); padding: 1px 6px; border-radius: 6px }
+
+/* EasyTips Kids channel note in the kids series cards (spec 0007) */
+.kids-channel { margin-top: 12px; font-size: .95em; color: var(--muted) }
+.kids-channel a { white-space: nowrap }
