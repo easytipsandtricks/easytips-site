@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-12",
+  "updated": "2026-11-14",
   "channel": "https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ",
   "channels": {
     "main": {
@@ -15,6 +15,21 @@
     }
   },
   "videos": [
+    {
+      "id": "home-life-tips-01",
+      "youtube_id": "bHz3jwSd9b8",
+      "url": "https://www.youtube.com/watch?v=bHz3jwSd9b8",
+      "title": "How to Thaw a Turkey Safely (and the Day to Start)",
+      "series": "home-life-tips",
+      "series_name": "Home & Life Tips",
+      "audience": "grown-ups",
+      "type": "full",
+      "duration_s": 58.8,
+      "duration": "0:59",
+      "published": "2026-11-13",
+      "thumbnail": "assets/videos/home-life-tips-01.jpg",
+      "channel": "main"
+    },
     {
       "id": "home-life-tips-19",
       "youtube_id": "arvnUWxMlDI",
