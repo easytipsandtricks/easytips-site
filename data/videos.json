@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "channel": "https://www.youtube.com/channel/UCg96a4lQa2eGcjYYQa8_wFQ",
   "channels": {
     "main": {
@@ -25,6 +25,21 @@
     }
   },
   "videos": [
+    {
+      "id": "creaky-door-00",
+      "youtube_id": "EEy6uJB7C0M",
+      "url": "https://www.youtube.com/watch?v=EEy6uJB7C0M",
+      "title": "Knock, knock… Creaky Door Stories is coming soon",
+      "series": "creaky-door",
+      "series_name": "Creaky Door Stories",
+      "audience": "grown-ups",
+      "type": "short",
+      "duration_s": 17,
+      "duration": "0:17",
+      "published": "2026-11-20",
+      "thumbnail": null,
+      "channel": "creaky"
+    },
     {
       "id": "home-life-tips-02-s02",
       "youtube_id": "72wLJ8yPkgI",
@@ -126,21 +141,6 @@
       "type": "short",
       "duration_s": 20.4,
       "duration": "0:20",
-      "published": "2026-11-20",
-      "thumbnail": null,
-      "channel": "kids"
-    },
-    {
-      "id": "kids-crafts-09-s01",
-      "youtube_id": "e-UF_lem1js",
-      "url": "https://www.youtube.com/watch?v=e-UF_lem1js",
-      "title": "Thanksgiving Place Cards Kids Can Make #Shorts",
-      "series": "kids-crafts",
-      "series_name": "Kids Crafts & Activities",
-      "audience": "kids",
-      "type": "short",
-      "duration_s": 44.8,
-      "duration": "0:45",
       "published": "2026-11-20",
       "thumbnail": null,
       "channel": "kids"
